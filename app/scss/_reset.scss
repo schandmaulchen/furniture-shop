@@ -9,7 +9,7 @@ html {
 }
   
 ul,
-ol[class] {
+ol {
   padding: 0;
 }
   
@@ -22,7 +22,7 @@ h5,
 h6,
 p,
 ul,
-ol[class],
+ol,
 li,
 figure,
 figcaption,
@@ -46,6 +46,11 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
   
 a {
