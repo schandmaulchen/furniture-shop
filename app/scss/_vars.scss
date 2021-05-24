@@ -1,31 +1,42 @@
 $accent: #fcd7b6;
-$light-blue: #a3bbc8;
-$blue: #436372;
-$darkblue: #243f4d;
+$blue-50: #dae4e9;
+$blue-100: #a3bbc8; //$light-blue
+$blue-200: #436372; //$blue
+$blue-300: #234969;
+$blue-400: #243f4d; //$darkblue
+$blue-500: #1f2044;
+
+$brown-50: #fef7f0;
+
+$grey-50: #e8e4df;
+$grey-300: #7b7b7b;
+$grey-400: #585858;
+$grey-500: #414141;
+
 
 
 %rubik-400 {
-	font-family: 'Rubik-Regular', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 400;
 }
 
 %rubik-500 {
-	font-family: 'Rubik-Medium', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
 }
 
 %dmsans-400 {
-	font-family: 'DMSans-Regular', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 400;
 }
 
 %dmsans-500 {
-	font-family: 'DMSans-Medium', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 500;
 }
 
 %dmsans-700 {
-	font-family: 'DMSans-Bold', sans-serif;
+	font-family: 'DMSans', sans-serif;
 	font-weight: 700;
 }
 

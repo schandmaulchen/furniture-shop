@@ -1,0 +1,163 @@
+.footer {
+  padding: 80px 0 40px;
+  font-size: 14px;
+  color: $grey-300;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:first-child {
+      max-width: 205px;
+    }
+
+    &:nth-child(4) {
+      max-width: 280px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+    border-top: 1px solid $blue-50;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__contact-address,
+  &__contact-link {
+    margin-bottom: 12px;
+  }
+
+  &__contact--upper {
+    text-transform: uppercase;
+  }
+
+  &__contact-link {
+    display: block;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active,
+    &:focus {
+      color: $blue-100;
+    }
+  }
+
+  &__title {
+    display: block;
+    padding-top: 15px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $blue-500;
+    margin-bottom: 20px;
+  }
+
+  &__menu-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__menu-link {
+    @extend %rubik-400;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $blue-100;
+    }
+
+    &:active,
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-right: 30px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      bottom: 5px;
+      right: -17px;
+      background-color: $grey-300;
+    }
+  }
+
+  &__nav-link {
+    color: $grey-300;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.subscribe-form {
+  @extend %dmsans-400;
+
+  &__input {
+    border: none;
+    padding: 9px 6px 9px 16px;
+    background-color: rgba($accent, 0.2);
+    border: 1px solid #fef7f0;
+    margin-right: -4px;
+    outline: transparent;
+    transition: all 0.5s;
+
+    &::placeholder {
+      font-size: 12px;
+      color: $blue-300;
+    }
+
+    &:hover {
+      border: 1px solid $blue-100;
+    }
+
+    &:focus {
+      background-color: #fff;
+      border: 1px solid $blue-100;
+    }
+
+    &:active {
+      border: 1px solid $blue-200;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 10px 19px 10px 16px;
+    color: #fff;
+    background-color: $blue-100;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: $blue-200;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $blue-500;
+    }
+  }
+}

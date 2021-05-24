@@ -1,0 +1,134 @@
+.header {
+  padding: 50px 0 40px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-left: 14%;
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $blue-200;
+    transition: color 0.5s;
+
+    &:hover,
+    &:active {
+      color: $accent;
+    }
+
+    &:focus {
+      color: $blue-100;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__search,
+  &__menu-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    @extend %bg-center;
+    transition: box-shadow 0.5s;
+  }
+
+  &__search {
+    background-color: rgba($blue-100, 0.2);
+    background-image: url(../images/icons/search.svg);
+    margin-right: 18px;
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    &:active,
+    &:focus {
+      background-color: $blue-100;
+    }
+  }
+
+  &__box {
+    width: 178px;
+    background-color: $accent;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 18px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      opacity: 0.4;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 18px 23px 10px;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.3);
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &:active,
+    &:focus {
+      svg {
+        fill: $blue-100;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    min-width: 16px;
+    min-height: 16px;
+    right: 12px;
+    top: 10px;
+    padding: 2px 5px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    color: $blue-400;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__menu-btn {
+    background-color: $blue-100;
+    background-image: url(../images/icons/menu.svg);
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    &:active,
+    &:focus {
+      background-color: $blue-200;
+    }
+  }
+}

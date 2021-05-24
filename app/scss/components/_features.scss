@@ -1,0 +1,57 @@
+.features {
+  display: flex;
+  background-color: rgba($accent, 0.2);
+
+  &__item {
+    width: 33.33%;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      border-right: 1px solid $grey-50;
+    }
+  }
+
+  &__name,
+  &__descr {
+    padding: 0 32%;
+  }
+
+  &__name {
+    display: block;
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $grey-500;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 53px;
+      height: 55px;
+      transform: translateX(-75px);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--support::before {
+      background-image: url(../images/features/support.svg);
+    }
+
+    &--delivery::before {
+      background-image: url(../images/features/delivery.svg);
+    }
+
+    &--payment::before {
+      background-image: url(../images/features/payment.svg);
+    }
+  }
+
+  &__descr {
+    @extend %dmsans-400;
+    line-height: 1.4;
+    color: $grey-400;
+  }
+}

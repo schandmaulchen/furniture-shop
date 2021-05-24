@@ -1,18 +1,18 @@
 html {
   box-sizing: border-box;
 }
-  
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-  
+
 ul,
 ol {
   padding: 0;
 }
-  
+
 body,
 h1,
 h2,
@@ -31,16 +31,16 @@ dl,
 dd {
   margin: 0;
 }
-  
+
 ul[class] {
   list-style: none;
 }
-  
+
 img {
   max-width: 100%;
   display: block;
 }
-  
+
 input,
 button,
 textarea,
@@ -51,9 +51,14 @@ select {
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
-  
+
 a {
   text-decoration: none;
   color: inherit;
-} 
+}
+
+address {
+  font-style: normal;
+}
