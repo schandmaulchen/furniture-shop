@@ -1,0 +1,51 @@
+.novation {
+  padding: 100px 0;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__filter {
+    margin-bottom: 65px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+}
+
+.novation-card {
+  width: 370px;
+  height: 246px;
+  padding: 43px 38px;
+  background-color: $grey-150;
+  @extend %dmsans-700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  &__name {
+    display: block;
+    max-width: 172px;
+    font-size: 20px;
+    color: $grey-900;
+    margin-bottom: 12px;
+  }
+
+  &__style {
+    color: $blue-100;
+  }
+
+  &__img {
+    position: relative;
+    right: -70px;
+    bottom: 20px;
+
+    &--full {
+      right: -160px;
+      bottom: 70px;
+    }
+  }
+}

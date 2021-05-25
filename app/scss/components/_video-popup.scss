@@ -1,0 +1,29 @@
+.video-popup {
+  height: 501px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/video-bg.jpg);
+  @extend %bg-center;
+  background-size: cover;
+
+  &__play {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background-color: $blue-100;
+    background-image: url(../images/icons/play.svg);
+    @extend %bg-center;
+    box-shadow: 0 0 0 15px rgba($blue-100, 0.4);
+    transition: all 0.8s;
+
+    &:hover {
+      box-shadow: 0 0 0 20px rgba($red-600, 0.4);
+      background-color: $red-500;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}

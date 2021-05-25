@@ -1,0 +1,14 @@
+.partners {
+  padding: 265px 0 90px;
+  background-color: rgba($accent, 0.2);
+
+  &__item {
+    min-height: 85px;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  &__img {
+    margin: auto;
+  }
+}

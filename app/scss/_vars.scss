@@ -1,19 +1,28 @@
 $accent: #fcd7b6;
+
 $blue-50: #dae4e9;
-$blue-100: #a3bbc8; //$light-blue
-$blue-200: #436372; //$blue
+$blue-100: #a3bbc8; 
+$blue-200: #436372; 
 $blue-300: #234969;
-$blue-400: #243f4d; //$darkblue
+$blue-400: #243f4d; 
 $blue-500: #1f2044;
+$blue-600: #222933;
 
 $brown-50: #fef7f0;
 
 $grey-50: #e8e4df;
+$grey-100: #e0e0e0;
+$grey-150: #f8f8f8;
+$grey-250: #8b8b8b;
 $grey-300: #7b7b7b;
 $grey-400: #585858;
 $grey-500: #414141;
+$grey-800: #262626;
+$grey-900: #1a1a1a;
+$grey-950: #191919;
 
-
+$red-500: #ff0000;
+$red-600: #e61a1a;
 
 %rubik-400 {
 	font-family: 'Rubik', sans-serif;
@@ -40,7 +49,20 @@ $grey-500: #414141;
 	font-weight: 700;
 }
 
+%poppins-700 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+}
+
 %bg-center {
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{a}x(#{$numbers});
 }

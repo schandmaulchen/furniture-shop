@@ -1,0 +1,39 @@
+.offers {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-card {
+  width: 49%;
+  min-height: 390px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($accent, 0.4);
+
+  &__img {
+    max-width: 235px;
+    max-height: 405px;
+    object-fit: contain;
+    margin-top: -180px;
+  }
+
+  &__content {
+    max-width: 330px;
+    padding-left: 35px;
+    color: $blue-400;
+  }
+
+  &__name {
+    display: block;
+    @extend %dmsans-700;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+  }
+}
