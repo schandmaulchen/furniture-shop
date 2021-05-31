@@ -20,6 +20,10 @@ body {
   width: 1px;
 }
 
+.lock-scroll {
+  overflow:hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,6 +39,14 @@ body {
   font-size: 36px;
   color: $grey-950;
   text-align: center;
+
+  @media (max-width: $screen-sm) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $screen-xs) {
+    font-size: 26px;
+  }
 }
 
 .more-link {
@@ -51,6 +63,11 @@ body {
   border: 1px solid $blue-100;
   transition: all 0.5s;
 
+  @media (max-width: $screen-xs) {
+    min-width: 140px;
+    padding: 12px;
+  }
+ 
   &:hover {
     background-color: $blue-200;
     border: 1px solid $blue-200;
@@ -71,6 +88,12 @@ body {
     color: $blue-200;
     fill: $blue-200;
 
+    @media (max-width: $screen-xs) {
+      min-width: 140px;
+      padding: 12px;
+    }
+    
+
     &:hover {
       color: #fff;
       fill: #fff;
@@ -82,8 +105,17 @@ body {
   display: flex;
   justify-content: center;
 
+  @media (max-width: $screen-xs) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
   &__item:not(:last-child) {
     margin-right: 18px;
+
+    @media (max-width: $screen-xs) {
+      margin-right: 5px;
+    }
   }
 
   &__btn {

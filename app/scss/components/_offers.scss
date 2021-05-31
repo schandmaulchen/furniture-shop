@@ -2,6 +2,17 @@
   padding-top: 80px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $screen-lg) {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 150px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-top: 20px;
+    row-gap: 30px;
+  }
 }
 
 .offer-card {
@@ -13,17 +24,47 @@
   align-items: center;
   background-color: rgba($accent, 0.4);
 
+  @media (max-width: $screen-lg) {
+    max-width: 850px;
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 20px;
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
   &__img {
     max-width: 235px;
     max-height: 405px;
     object-fit: contain;
     margin-top: -180px;
+
+    @media (max-width: $screen-sm) {
+      max-width: 150px;
+      margin-top: 0px;
+    }
+
+    @media (max-width: $screen-xs) {
+      display: none;
+    }
   }
 
   &__content {
     max-width: 330px;
     padding-left: 35px;
     color: $blue-400;
+
+    @media (max-width: $screen-sm) {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 10px;
+    }
   }
 
   &__name {
@@ -31,6 +72,14 @@
     @extend %dmsans-700;
     font-size: 26px;
     margin-bottom: 15px;
+
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $screen-xs) {
+      font-size: 20px;
+    }
   }
 
   &__descr {

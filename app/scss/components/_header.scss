@@ -1,10 +1,45 @@
 .header {
   padding: 50px 0 40px;
 
+  @media (max-width: $screen-xs) {
+    padding: 30px 0;
+  }
+
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__menu {
+    @media (max-width: $screen-lg) {
+      position: fixed;
+      flex-direction: column;
+      margin: 0;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      background-color: $blue-50;
+      z-index: 1;
+      padding: 150px 40px 0;
+      box-shadow: 0px 5px 10px 2px rgba($blue-600, 0.3);
+      transform: translateX(200%);
+      transition: transform 0.5s;
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      padding-top: 200px;
+      width: 60%;
+    }
+
+    @media (max-width: $screen-xs) {
+      width: 100%;
+    }
   }
 }
 
@@ -12,8 +47,16 @@
   display: flex;
   margin-left: 14%;
 
+  @media (max-width: $screen-sm) {
+    margin: 0;
+  }
+
   &__item:not(:last-child) {
     margin-right: 35px;
+
+    @media (max-width: $screen-lg) {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -21,6 +64,13 @@
     font-size: 15px;
     color: $blue-200;
     transition: color 0.5s;
+
+    @media (max-width: $screen-lg) {
+      display: block;
+      text-align: right;
+      font-size: 20px;
+      padding: 10px 0;
+    }
 
     &:hover,
     &:active {
@@ -33,8 +83,37 @@
   }
 }
 
+.menu-btn {
+  fill: $blue-200;
+  z-index: 1;
+  display: none;
+
+  @media (max-width: $screen-lg) {
+    display: block;
+  }
+}
+
 .user-nav {
   display: flex;
+
+  @media (max-width: $screen-lg) {
+    position: absolute;
+    right: 90px;
+    top: 50px;
+  }
+
+  @media (max-width: $screen-sm) {
+    position: fixed;
+    transform: translateX(200%);
+    right: 20px;
+    top: 120px;
+    z-index: 1;
+    transition: transform 0.5s;
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
 
   &__search,
   &__menu-btn {
@@ -49,6 +128,10 @@
     background-color: rgba($blue-100, 0.2);
     background-image: url(../images/icons/search.svg);
     margin-right: 18px;
+
+    @media (max-width: $screen-sm) {
+      margin-right: 8px;
+    }
 
     &:hover {
       box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
@@ -68,6 +151,11 @@
     margin-right: 18px;
     position: relative;
 
+    @media (max-width: $screen-sm) {
+      width: 140px;
+      margin-right: 8px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -84,26 +172,18 @@
   &__link {
     display: inline-block;
     padding: 18px 23px 10px;
+    fill: $blue-400;
     position: relative;
     transition: all 0.5s;
 
-    svg {
-      fill: $blue-400;
-    }
-
     &:hover {
       transform: scale(1.3);
-
-      svg {
-        fill: #fff;
-      }
+      fill: #fff;
     }
 
     &:active,
     &:focus {
-      svg {
-        fill: $blue-100;
-      }
+      fill: $blue-100;
     }
   }
 

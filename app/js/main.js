@@ -1,5 +1,12 @@
 $(function() {
 
+  $('.menu-btn, .menu__link').on('click', function(){
+    $('.header__menu').toggleClass('header__menu--active');
+    $('.user-nav').toggleClass('user-nav--open');
+    $('body').toggleClass('lock-scroll');
+    $('.menu-btn').toggleClass('menu-btn--close');
+  });
+
   $('.main-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -11,6 +18,27 @@ $(function() {
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings : {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings : {
+          slidesToShow: 2
+        }
+      },
+
+      {
+        breakpoint: 480,
+        settings : {
+          slidesToShow: 1
+        }
+      },
+    ]
   });
 
 

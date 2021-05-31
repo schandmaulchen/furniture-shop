@@ -2,6 +2,14 @@
   &__inner {
     background-color: $accent;
     padding: 102px 0 48px;
+
+    @media (max-width: $screen-md) {
+      padding: 50px 0;
+    }
+
+    @media (max-width: $screen-xs) {
+      padding: 0 0 20px;
+    }
   }
 
   &__item {
@@ -9,12 +17,33 @@
     justify-content: center;
     align-items: center;
     min-height: 635px;
+
+    @media (max-width: $screen-lg) {
+      padding: 0 50px;
+      flex-direction: column-reverse;
+    }
+
+    @media (max-width: $screen-xs) {
+      padding: 0 10px;
+      min-height: 520px;
+    }
   }
 
   &__content {
     max-width: 430px;
     margin-right: 90px;
     padding-bottom: 95px;
+
+    @media (max-width: $screen-xl) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: $screen-lg) {
+      max-width: 100%;
+      margin-right: 0;
+      padding-bottom: 0;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -24,6 +53,19 @@
     color: $blue-400;
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @media (max-width: $screen-md) {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 56px;
+    }
+
+    @media (max-width: $screen-xs) {
+      font-size: 40px;
+    }
   }
 
   &__descr {
@@ -31,12 +73,34 @@
     font-size: 18px;
     color: $blue-200;
     margin-bottom: 35px;
+
+    @media (max-width: $screen-lg) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $screen-xs) {
+      font-size: 16px;
+    }
   }
 
   &__picture {
     max-width: 640px;
     max-height: 264px;
     position: relative;
+
+    @media (max-width: $screen-xl) {
+      max-width: 550px;
+      max-height: auto;
+    }
+
+    @media (max-width: $screen-lg) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $screen-sm) {
+      max-width: 400px;
+      margin-bottom: 60px;
+    }
 
     &::after {
       content: "";
@@ -48,6 +112,22 @@
       transform: translateY(-50%);
       border-radius: 50%;
       background-image: linear-gradient(-90.0deg, #ffffff 0%, rgba(255, 255, 255, 0.0) 100%);
+
+      @media (max-width: $screen-xl) {
+        width: 550px;
+        height: 550px;
+        left: 12%;
+      }
+
+      @media (max-width: $screen-lg) {
+        width: 330px;
+        height: 330px;
+        left: 50%;
+      }
+
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
     }
   }
 

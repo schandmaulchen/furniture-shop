@@ -7,6 +7,10 @@
   @extend %bg-center;
   background-size: cover;
 
+  @media (max-width: $screen-sm) {
+    min-height: 300px;
+  }
+
   &__play {
     width: 98px;
     height: 98px;
@@ -16,6 +20,13 @@
     @extend %bg-center;
     box-shadow: 0 0 0 15px rgba($blue-100, 0.4);
     transition: all 0.8s;
+
+    @media (max-width: $screen-sm) {
+      width: 70px;
+      height: 70px;
+      background-size: 30%;
+      box-shadow: 0 0 0 10px rgba($blue-100, 0.4);
+    }
 
     &:hover {
       box-shadow: 0 0 0 20px rgba($red-600, 0.4);
