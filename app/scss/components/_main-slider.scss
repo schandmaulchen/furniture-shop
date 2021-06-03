@@ -3,12 +3,8 @@
     background-color: $accent;
     padding: 102px 0 48px;
 
-    @media (max-width: $screen-md) {
-      padding: 50px 0;
-    }
-
-    @media (max-width: $screen-xs) {
-      padding: 0 0 20px;
+    @media (max-width: $screen-xl) {
+      padding: 0;
     }
   }
 
@@ -18,14 +14,19 @@
     align-items: center;
     min-height: 635px;
 
+    @media (max-width: $screen-xl) {
+      padding: 150px 40px;
+      min-height: 600px;
+    }
+
     @media (max-width: $screen-lg) {
-      padding: 0 50px;
+      padding: 80px 40px 50px;
       flex-direction: column-reverse;
     }
 
     @media (max-width: $screen-xs) {
-      padding: 0 10px;
-      min-height: 520px;
+      padding: 0 40px;
+      min-height: 480px;
     }
   }
 
@@ -36,18 +37,18 @@
 
     @media (max-width: $screen-xl) {
       margin-right: 20px;
+      padding-bottom: 0;
     }
 
     @media (max-width: $screen-lg) {
       max-width: 100%;
-      margin-right: 0;
-      padding-bottom: 0;
+      margin-right: 0;      
       text-align: center;
     }
   }
 
   &__title {
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 72px;
     line-height: 1.1;
     color: $blue-400;
@@ -80,6 +81,7 @@
 
     @media (max-width: $screen-xs) {
       font-size: 16px;
+      margin-bottom: 15px;
     }
   }
 
@@ -94,12 +96,16 @@
     }
 
     @media (max-width: $screen-lg) {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     @media (max-width: $screen-sm) {
       max-width: 400px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 15px;
     }
 
     &::after {
@@ -120,9 +126,9 @@
       }
 
       @media (max-width: $screen-lg) {
-        width: 330px;
-        height: 330px;
-        left: 50%;
+        width: 300px;
+        height: 300px;
+        left: 60%;
       }
 
       @media (max-width: $screen-sm) {
@@ -140,6 +146,11 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width: $screen-xl) {
+      position: relative;
+      bottom: 20px;
+    }
+
     li {
       margin-right: 10px;
 
@@ -149,13 +160,12 @@
 
       button {
         font-size: 11px;
-        @extend %rubik-500;
+        font-weight: 500;
         color: $blue-400;
         width: 30px;
         height: 29px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.3);
-        outline: transparent;
         transition: background-color 0.3s;
 
         &:hover {

@@ -3,6 +3,10 @@
   font-size: 14px;
   color: $grey-300;
 
+  @media (max-width: $screen-sm) {
+    padding: 50px 0 20px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -18,11 +22,29 @@
       max-width: 205px;
 
       @media (max-width: $screen-md) {
-        width: 45%;
-        max-width: 300px;
+        width: 50%;
+        max-width: 800px;
+        order: 0;
       }
 
       @media (max-width: $screen-sm) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media (max-width: $screen-md) {
+        width: 50%;
+        order: 1;
+      }
+
+      @media (max-width: $screen-sm) {
+        text-align: center;
+      }
+
+      @media (max-width: $screen-xs) {
         width: 100%;
       }
     }
@@ -31,13 +53,19 @@
       max-width: 280px;
 
       @media (max-width: $screen-md) {
+        order: 0;
         width: 50%;
-        max-width: 500px;
+        max-width: 800px;
       }
 
       @media (max-width: $screen-sm) {
         width: 100%;
         padding-bottom: 40px;
+        text-align: center;
+      }
+
+      @media (max-width: $screen-xs) {
+        padding-bottom: 0;
       }
     }
 
@@ -45,11 +73,7 @@
       margin-bottom: 70px;
 
       @media (max-width: $screen-md) {
-        margin-bottom: 30px;
-      }
-
-      @media (max-width: $screen-sm) {
-        margin-bottom: 0px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -60,6 +84,7 @@
     justify-content: space-between;
     padding-top: 35px;
     border-top: 1px solid $blue-50;
+    order: 2;
 
     @media (max-width: $screen-sm) {
       flex-direction: column;
@@ -68,7 +93,7 @@
   }
 
   &__logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 25px;
   }
 
@@ -78,6 +103,10 @@
     .footer__link {
       display: block;
       margin-bottom: 12px;
+
+      @media (max-width: $screen-md) {
+        margin-bottom: 0;
+      }
     }
 
     &--upper {
@@ -100,41 +129,60 @@
     }
   }
 
-  &__menu-item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-
   &__link {
+    display: block;
     transition: color 0.5s;
+    padding-bottom: 10px;
+
+    @media (max-width: $screen-md) {
+      line-height: 1;
+      padding: 10px 0;
+    }
 
     &:hover {
       color: $blue-100;
     }
 
-    &:active,
-    &:focus {
+    &:active {
       color: $accent;
+    }
+
+    &:focus {
+      color: $blue-300;
     }
   }
 
   &__text {
     margin-bottom: 35px;
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 15px;
+    }
+
   }
 
   &__copy {
     @media (max-width: $screen-sm) {
       text-align: center;
-      margin-bottom: 20px;
     }
   }
 
   &__nav-item {
     padding-left: 15px;
 
+    @media (max-width: $screen-sm) {
+      padding-left: 0;
+    }
+
     &:not(:last-child) {
       margin-right: 0;
       padding-right: 15px;
       border-right: 1px solid $grey-300;
+
+      @media (max-width: $screen-sm) {
+        padding-right: 0;
+        border-right: 0;
+      }
     }
   }
 
@@ -143,12 +191,21 @@
     font-weight: 400;
     font-size: 14px;
     padding: 0;
+
+    @media (max-width: $screen-sm) {
+      font-weight: 500;
+      padding: 20px 15px;
+    }
   }
 }
 
 .subscribe-form {
-  display: flex;
-  @extend %dmsans-400;
+  display: inline-flex;
+  font-family: 'DMSans', sans-serif;
+
+  @media (max-width: $screen-sm) {
+    margin: 0 auto;
+  }
 
   &__input {
     padding: 9px 6px 9px 16px;
@@ -159,6 +216,10 @@
 
     @media (max-width: $screen-md) {
       min-width: 250px;
+    }
+
+    @media (max-width: $screen-sm) {
+      min-width: 300px;
     }
 
     @media (max-width: $screen-xs) {
@@ -194,7 +255,11 @@
       background-color: $blue-200;
     }
 
-    &:focus,
+    &:focus {
+      color: $blue-600;
+      background-color: $blue-50;
+    }
+
     &:active {
       background-color: $blue-500;
     }

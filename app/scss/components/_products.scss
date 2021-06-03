@@ -34,6 +34,7 @@
   @media (max-width: $screen-lg) {
     width: 40%;
     max-width: 500px;
+    box-shadow: 0px 6px 15px 7px rgba(37, 37, 37, 0.1);
   }
 
   @media (max-width: $screen-sm) {
@@ -94,9 +95,15 @@
       fill: #fff;
     }
 
-    &:active,
-    &:focus {
+    &:active {
       background-color: $accent;
+      fill: #fff;
+    }
+
+    &:focus {
+      fill: rgba($blue-600, 0.3);
+      box-shadow: 0px 0px 0px 2px rgba($blue-600, 0.3);
+
     }
   }
 

@@ -36,5 +36,9 @@
     &:active {
       box-shadow: none;
     }
+
+    &:focus {
+      background-color: $blue-50;
+    }
   }
 }

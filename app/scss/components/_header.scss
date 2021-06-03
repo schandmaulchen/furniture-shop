@@ -1,8 +1,12 @@
 .header {
   padding: 50px 0 40px;
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-xl) {
     padding: 30px 0;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 20px 0;
   }
 
   &__nav {
@@ -60,10 +64,11 @@
   }
 
   &__link {
-    @extend %rubik-500;
+    font-weight: 500;
     font-size: 15px;
     color: $blue-200;
-    transition: color 0.5s;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s;
 
     @media (max-width: $screen-lg) {
       display: block;
@@ -72,7 +77,11 @@
       padding: 10px 0;
     }
 
-    &:hover,
+    &:hover {
+      color: $accent;
+      border-bottom: 2px solid $accent;
+    }
+
     &:active {
       color: $accent;
     }
@@ -84,9 +93,15 @@
 }
 
 .menu-btn {
-  fill: $blue-200;
   z-index: 1;
   display: none;
+  background-image: url(../images/icons/menu-icon.svg);
+  width: 50px;
+  height: 50px;
+
+  &--close {
+    background-image: url(../images/icons/cross.svg);
+  }
 
   @media (max-width: $screen-lg) {
     display: block;
@@ -99,7 +114,7 @@
   @media (max-width: $screen-lg) {
     position: absolute;
     right: 90px;
-    top: 50px;
+    top: 30px;
   }
 
   @media (max-width: $screen-sm) {
@@ -137,7 +152,11 @@
       box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
 
-    &:active,
+    &:active {
+      background-color: $grey-150;
+      box-shadow: 0px 0px 0px 1px rgba($blue-600, 0.3);
+    }
+
     &:focus {
       background-color: $blue-100;
     }
@@ -172,6 +191,7 @@
   &__link {
     display: inline-block;
     padding: 18px 23px 10px;
+    border-radius: 50px;
     fill: $blue-400;
     position: relative;
     transition: all 0.5s;
@@ -181,9 +201,13 @@
       fill: #fff;
     }
 
-    &:active,
+    &:active {
+      fill: rgba($red-600, 0.6);
+    }
+
     &:focus {
-      fill: $blue-100;
+      fill: rgba($red-600, 0.6);
+      box-shadow: 0px 0px 0px 1px rgba($red-600, 0.6);
     }
   }
 
@@ -194,7 +218,7 @@
     right: 12px;
     top: 10px;
     padding: 0 4px;
-    @extend %dmsans-400;
+    font-family: 'DMSans', sans-serif;
     font-size: 10px;
     color: $blue-400;
     text-align: center;
@@ -210,9 +234,13 @@
       box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
 
-    &:active,
-    &:focus {
+    &:active {
       background-color: $blue-200;
+    }
+
+    &:focus {
+      background-color: $blue-50;
+      box-shadow: 0px 0px 0px 1px rgba($blue-600, 0.3);
     }
   }
 }

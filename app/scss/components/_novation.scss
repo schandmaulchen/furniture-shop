@@ -23,7 +23,6 @@
 .novation-card {
   width: 370px;
   min-height: 246px;
-  padding: 43px 38px;
   background-color: $grey-150;
   @extend %dmsans-700;
   line-height: 1.2;
@@ -46,6 +45,16 @@
     box-shadow: 0px 5px 10px 2px rgba($blue-600, 0.3);
   }
 
+  &:active {
+    background-color: $blue-50;
+  }
+
+  &__link {
+    padding: 43px 38px;
+    width: 100%;
+    height: 100%;
+  }
+
   &__name {
     display: block;
     max-width: 172px;
@@ -60,8 +69,11 @@
 
   &__img {
     position: absolute;
-    right: -70px;
+    max-width: 300px;
+    max-height: 200px;
+    right: 0;
     bottom: 20px;
+    object-fit: contain;
     z-index: -1;
 
     &--full {

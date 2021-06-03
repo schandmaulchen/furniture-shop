@@ -55,7 +55,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 17px 20px;
-  @extend %rubik-500;
+  font-weight: 500;
   font-size: 15px;
   color: #fff;
   fill: #fff;
@@ -73,7 +73,13 @@ body {
     border: 1px solid $blue-200;
   }
 
-  &:active,
+  &:active {
+    background-color: $blue-100;
+    border: 1px solid $blue-200;
+    color: $blue-200;
+    fill: $blue-200;
+  }
+
   &:focus {
     background-color: transparent;
     border: 1px solid #fff;
@@ -91,10 +97,14 @@ body {
     @media (max-width: $screen-xs) {
       min-width: 140px;
       padding: 12px;
-    }
-    
+    }    
 
     &:hover {
+      color: #fff;
+      fill: #fff;
+    }
+
+    &:focus {
       color: #fff;
       fill: #fff;
     }
