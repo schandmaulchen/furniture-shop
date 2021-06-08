@@ -21,7 +21,7 @@ body {
 }
 
 .lock-scroll {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -32,6 +32,12 @@ body {
   &--fluid {
     max-width: 1800px;
   }
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 300;
+  color: $blue-600;
 }
 
 .title {
@@ -64,10 +70,11 @@ body {
   transition: all 0.5s;
 
   @media (max-width: $screen-xs) {
-    min-width: 140px;
-    padding: 12px;
+    min-width: 160px;
+    padding: 12px 14px;
+    font-size: 19px;
   }
- 
+
   &:hover {
     background-color: $blue-200;
     border: 1px solid $blue-200;
@@ -95,9 +102,9 @@ body {
     fill: $blue-200;
 
     @media (max-width: $screen-xs) {
-      min-width: 140px;
+      min-width: 160px;
       padding: 12px;
-    }    
+    }
 
     &:hover {
       color: #fff;
@@ -124,7 +131,7 @@ body {
     margin-right: 18px;
 
     @media (max-width: $screen-xs) {
-      margin-right: 5px;
+      margin-right: 10px;
     }
   }
 
@@ -132,6 +139,11 @@ body {
     @extend %dmsans-700;
     color: $grey-250;
     transition: color 0.5s;
+
+    @media (max-width: $screen-xs) {
+      font-size: 20px;
+      padding: 6px;
+    }
 
     &:hover {
       color: $grey-900;

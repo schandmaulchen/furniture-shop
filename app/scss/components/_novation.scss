@@ -7,6 +7,10 @@
 
   &__filter {
     margin-bottom: 65px;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 50px;
+    }
   }
 
   &__wrap {

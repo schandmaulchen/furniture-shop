@@ -1,0 +1,340 @@
+.product {
+  padding: 25px 25px 38px;
+  max-width: 270px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+
+  @media (max-width: $screen-lg) {
+    width: 40%;
+    max-width: 500px;
+    box-shadow: 0px 6px 15px 7px rgba(37, 37, 37, 0.1);
+  }
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 15px 15px 20px;
+  }
+
+  &--list {
+    max-width: 850px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: none;
+
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+    }
+
+    &:hover.product--list {
+      .product__actions {
+        transform: none;
+      }
+    }
+
+    .product__image {
+      min-width: 370px;
+      min-height: 501px;
+      padding: 25px;
+      background-color: $grey-60;
+      border: 2px solid $grey-70;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: $screen-lg) {
+        min-width: 310px;
+        min-height: 430px;
+        width: 40%;
+        height: 100%;
+      }
+
+      @media (max-width: $screen-sm) {
+        width: 80%;
+        min-height: auto;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: $screen-xs) {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+
+    .product__img {
+      width: 330px;
+      height: 350px;
+
+
+      @media (max-width: $screen-lg) {
+        width: 230px;
+        height: 250px;
+      }
+
+      @media (max-width: $screen-xs) {
+        width: 180px;
+        height: 200px;
+      }
+    }
+
+    .product__content {
+      max-width: 460px;
+      padding-left: 55px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media (max-width: $screen-sm) {
+        max-width: 80%;
+        padding-left: 0;
+      }
+
+      @media (max-width: $screen-xs) {
+        max-width: 100%;
+      }
+    }
+
+    .product__actions {
+      opacity: 1;
+      transform: none;
+      order: 2;
+    }
+
+    .product__actions-item {
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .product__actions-btn {
+      width: 50px;
+      height: 50px;
+      padding: 14px 0;
+      background-color: transparent;
+      box-shadow: none;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      border-radius: 0px;
+    }
+
+    .product__name {
+      font-family: 'Rubik', sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: $grey-600;
+      margin-bottom: 15px;
+
+      @media (max-width: $screen-sm) {
+        font-size: 32px;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: $screen-xs) {
+        font-size: 28px;
+      }
+    }
+
+    .product__rating {
+      display: block;
+      padding: 0;
+      margin-bottom: 25px;
+
+      @media (max-width: $screen-sm) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .product__price {
+      font-size: 30px;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      color: $grey-600;
+      margin-bottom: 15px;
+
+      @media (max-width: $screen-sm) {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: $screen-xs) {
+        font-size: 22px;
+      }
+    }
+
+    .product__descr {
+      display: block;
+      text-align: left;
+      color: $blue-400;
+      margin-bottom: 40px;
+
+      @media (max-width: $screen-sm) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--recent {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    transition: transform 0.5s;
+
+    @media (max-width: $screen-sm) {
+      flex-direction: row;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+
+      .product__name {
+        color: $blue-100;
+      }
+    }
+
+    .product__image {
+      min-width: auto;
+      min-height: auto;
+      width: 71px;
+      height: 71px;
+
+      @media (max-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .product__img {
+      max-width: 55px;
+      max-height: 65px;
+    }
+
+    .product__content {
+      padding-left: 20px;
+    }
+
+    .product__name {
+      font-size: 14px;
+      margin-bottom: 5px;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $blue-100;
+      }
+
+      &:active {
+        color: $accent;
+      }
+
+      &:focus {
+        color: $blue-50;
+
+      }
+    }
+
+    .product__rating {
+      margin-bottom: 10px;
+    }
+
+    .product__price {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    .product__actions {
+      transform: translateY(-55px);
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    width: 200px;
+    height: 190px;
+    object-fit: contain;
+
+    @media (max-width: $screen-lg) {
+      margin: 0 auto;
+    }
+  }
+
+  &__actions {
+    padding: 14px 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+
+    @media (max-width: $screen-xs) {
+      padding: 0;
+    }
+  }
+
+  &__actions-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__actions-btn {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 12px 0;
+    background-color: #fff;
+    fill: $blue-100;
+    border-radius: 50%;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $blue-100;
+      fill: #fff;
+    }
+
+    &:active {
+      background-color: $accent;
+      fill: #fff;
+    }
+
+    &:focus {
+      fill: rgba($blue-600, 0.3);
+      box-shadow: 0px 0px 0px 2px rgba($blue-600, 0.3);
+
+    }
+  }
+
+  &__name {
+    display: block;
+    @extend %dmsans-500;
+    font-size: 16px;
+    color: $blue-400;
+    margin-bottom: 10px;
+
+    @media (max-width: $screen-xs) {
+      font-size: 20px;
+    }
+  }
+
+  &__rating {
+    display: none;
+  }
+
+  &__descr {
+    display: none;
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    color: $blue-100;
+
+    @media (max-width: $screen-xs) {
+      font-size: 18px;
+    }
+  }
+}
