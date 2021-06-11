@@ -4,21 +4,25 @@
 @import 'libs';
 @import 'global';
 
-@import 'components/header';
+@import 'components/global/header';
 
-@import 'components/main-slider';
-@import 'components/features';
-@import 'components/products';
-@import 'components/product';
-@import 'components/offers';
-@import 'components/novation';
-@import 'components/video-popup';
-@import 'components/blog';
-@import 'components/partners';
+@import 'components/index/main-slider';
+@import 'components/index/features';
+@import 'components/index/products';
+@import 'components/global/product';
+@import 'components/index/offers';
+@import 'components/index/novation';
+@import 'components/index/video-popup';
+@import 'components/global/blog';
+@import 'components/global/partners';
 
-@import 'components/breadcrumbs';
-@import 'components/panigation';
-@import 'catalog/catalog';
-@import 'catalog/catalog-filter';
+@import 'components/global/breadcrumbs';
+@import 'components/global/panigation';
+@import 'components/catalog/catalog';
+@import 'components/catalog/aside';
 
-@import 'components/footer';
+@import 'components/about/about';
+@import 'components/about/stats';
+@import 'components/about/team';
+
+@import 'components/global/footer';

@@ -38,7 +38,7 @@
       border: 1px solid rgba($blue-400, 0.5);
     }
 
-    &--active {
+    &.active {
       color: #fff;
       background-color: $blue-100;
       &:hover {

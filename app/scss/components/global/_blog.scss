@@ -2,6 +2,10 @@
   padding: 120px 0 10px;
   position: relative;
 
+  @media (max-width: $screen-xs) {
+    padding-top: 80px;
+  }
+
   &::after {
     content: "";
     position: absolute;

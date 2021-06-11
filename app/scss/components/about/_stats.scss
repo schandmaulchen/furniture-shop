@@ -1,0 +1,69 @@
+.stats {
+  padding: 85px 0;
+  background-color: $accent;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $screen-md) {
+      justify-content: space-evenly;
+      row-gap: 50px;
+    }
+
+  }
+
+  &__item {
+    padding-top: 80px;
+    @extend %dmsans-700;
+    font-size: 18px;
+    text-align: center;
+    color: $blue-400;
+    position: relative;
+
+    @media (max-width: $screen-md) {
+      width: 35%;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 50%;
+    }
+
+    @media (max-width: $screen-xs) {
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 64px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @extend %bg-center;
+    }
+
+    &--clients::before {
+      background-image: url(../../images/about/stats-1.svg);
+    }
+
+    &--products::before {
+      background-image: url(../../images/about/stats-2.svg);
+    }
+
+    &--time::before {
+      background-image: url(../../images/about/stats-3.svg);
+    }
+
+    &--brands::before {
+      background-image: url(../../images/about/stats-4.svg);
+    }
+  }
+
+  &__num {
+    display: block;
+    font-size: 36px;
+  }
+}
