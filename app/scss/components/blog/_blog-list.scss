@@ -1,0 +1,28 @@
+.blog-list {
+  padding: 120px 0;
+  display: flex;
+
+  @media (max-width: $screen-md) {
+    padding: 80px 0;
+  }
+
+  &__wrapper {
+    padding-right: 70px;
+
+    @media (max-width: $screen-md) {
+      padding-right: 0;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 30px;
+  }
+
+  &__aside {
+    max-width: 270px;
+
+    @media (max-width: $screen-md) {
+      max-width: 100%;
+    }
+  }
+}

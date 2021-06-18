@@ -15,13 +15,13 @@
   <main>
     <div class="breadcrumbs">
       <div class="container">
-        <h1 class="main-title">Product list 1</h1>
+        <h1 class="main-title">Product list</h1>
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Home</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Product list 1</a>
+            <a class="breadcrumbs__link" href="#">Product list</a>
           </li>
         </ul>
       </div>      
@@ -159,7 +159,7 @@
         <div class="catalog__content">
           <div class="catalog__view">
             <!-- View -->
-            <button class="catalog__btn-filter">
+            <button class="catalog__btn-filter aside-btn">
               <span class="sr-only">open filters</span>
               <svg height="25" width="40">
                 <use xlink:href="images/sprite.svg#filter"></use>
@@ -733,20 +733,7 @@
               </div>                
             </article>
           </div>
-          <ul class="pagination">
-            <li class="pagination__item">
-              <a class="pagination__link active" href="#">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">Next</a>
-            </li>
-          </ul>
+          @@include('../components/panigation.html')
         </div>          
       </div>
     </div>
