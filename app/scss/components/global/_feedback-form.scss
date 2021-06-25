@@ -1,0 +1,136 @@
+.feedback-form {
+  &__title {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: $blue-200;
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__input,
+  &__message {
+    color: $grey-600;
+    border: 1px solid rgba(#000, 0.1);
+
+    &::placeholder {
+      color: #999999;
+    }
+
+    &:hover {
+      border: 1px solid rgba(#000, 0.3);
+    }
+
+    &:active {
+      border: 1px solid $accent;
+    }
+
+    &:focus {
+      border: 1px solid $blue-100;
+    }
+  }
+
+  &__label {
+    width: 50%;
+    position: relative;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      right: 20px;
+      top: 50%;
+      @extend %bg-center;
+      transform: translateY(-50%);
+    }
+
+    &--user {
+      margin-right: 30px;
+
+      @media (max-width: $screen-sm) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &::after {
+        background-image: url(../images/icons/form-user.svg);
+      }
+    }
+
+    &--mail::after {
+      width: 18px;
+      height: 13px;
+      background-image: url(../images/icons/form-mail.svg);
+    }
+
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 45px 10px 20px;
+  }
+
+  &__textarea {
+    display: block;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 20px;
+      top: 20px;
+      background-image: url(../images/icons/form-comment.svg);
+      @extend %bg-center;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    min-height: 120px;
+    padding: 20px 40px 20px 20px;
+  }
+
+  &__btn {
+    padding: 13px 33px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: $blue-100;
+    border: 1px solid $blue-100;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $blue-200;
+      border: 1px solid $blue-200;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: $accent;
+      border: 1px solid $accent;
+    }
+
+    &:focus {
+      color: $blue-100;
+      background-color: #fff;
+    }
+  }
+}

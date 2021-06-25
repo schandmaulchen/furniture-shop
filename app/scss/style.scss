@@ -13,7 +13,7 @@
 @import 'components/index/offers';
 @import 'components/index/novation';
 @import 'components/index/video-popup';
-@import 'components/global/blog';
+@import 'components/global/blog-list';
 @import 'components/global/partners';
 
 @import 'components/global/breadcrumbs';
@@ -25,7 +25,9 @@
 @import 'components/about/stats';
 @import 'components/about/team';
 
-@import 'components/blog/blog-list';
+@import 'components/blog/blog';
 @import 'components/blog/post';
+@import 'components/blog/comments';
+@import 'components/global/feedback-form';
 
 @import 'components/global/footer';

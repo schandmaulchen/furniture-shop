@@ -27,9 +27,9 @@
     </div>
 
     <div class="container">
-      <div class="blog-list">
-        <div class="blog-list__wrapper">
-          <button class="blog-list__btn aside-btn">
+      <div class="blog">
+        <div class="blog__inner">
+          <button class="blog__btn aside-btn">
             <span class="sr-only">open filters</span>
             <svg height="25" width="40">
               <use xlink:href="images/sprite.svg#filter"></use>
@@ -61,7 +61,7 @@
               </p>              
             </div>
 
-            <a class="post__link more-link" href="#">
+            <a class="post__link more-link" href="blog-details.html">
               View More
               <svg height="18" width="19">
                 <use xlink:href="images/sprite.svg#arrow-right"></use>
@@ -173,90 +173,7 @@
 
           @@include('../components/panigation.html')
         </div>
-        <aside class="blog-list__aside aside">
-          <button class="aside__close">
-            <svg height="20" width="40">
-              <use xlink:href="images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <div class="aside__item">
-            <form class="search-form" action="#">
-              <label>
-                <input class="search-form__input" type="text">
-              </label>
-              <button class="search-form__btn">
-                <svg height="18" width="19">
-                  <use xlink:href="images/sprite.svg#search-product"></use>
-                </svg> 
-              </button>
-            </form>
-          </div>
-
-          <div class="aside__item">
-            <h3 class="aside__title">Category </h3>
-            <form class="catalog-filter" action="#">                
-              <input class="catalog-filter__checkbox sr-only"  id="chair" type="checkbox">
-              <label class="catalog-filter__label" for="chair">Chair</label>
-
-              <input class="catalog-filter__checkbox sr-only"  id="table" type="checkbox">
-              <label class="catalog-filter__label" for="table">Table</label>
-
-              <input class="catalog-filter__checkbox sr-only"  id="lamp" type="checkbox">
-              <label class="catalog-filter__label" for="lamp">Lamp</label>
-
-              <input class="catalog-filter__checkbox sr-only"  id="watch" type="checkbox">
-              <label class="catalog-filter__label" for="watch">Watch</label>
-
-              <input class="catalog-filter__checkbox sr-only"  id="clock" type="checkbox">
-              <label class="catalog-filter__label" for="clock">Clock</label>
-            </form>
-          </div>
-
-          <div class="aside__item">
-            <h3 class="aside__title">Recent posts</h3>
-
-            <article class="blog-article blog-article--recent">
-              <img class="blog-article__img" src="images/blog/recent-1.jpg" alt="kitchen">
-              <div class="blog-article__content">              
-                <a class="blog-article__link" href="#">
-                  Corem ipsum dolor tetur adipisicing elit  
-                </a>
-                <span class="blog-article__date">28 january, 2020</span>
-              </div>
-            </article>
-
-            <article class="blog-article blog-article--recent">
-              <img class="blog-article__img" src="images/blog/recent-2.jpg" alt="living room">
-              <div class="blog-article__content">              
-                <a class="blog-article__link" href="#">
-                  Fdipisicing elit, sed do eiusmod tempor    
-                </a>
-                <span class="blog-article__date">28 january, 2020</span>
-              </div>
-            </article>
-
-            <article class="blog-article blog-article--recent">
-              <img class="blog-article__img" src="images/blog/recent-3.jpg" alt="living room furniture">
-              <div class="blog-article__content">              
-                <a class="blog-article__link" href="#">
-                  Eonsectetur adipisicing elit, sed do eiusmod    
-                </a>
-                <span class="blog-article__date">28 january, 2020</span>
-              </div>
-            </article>
-
-            <article class="blog-article blog-article--recent">
-              <img class="blog-article__img" src="images/blog/recent-4.jpg" alt="dining room furniture">
-              <div class="blog-article__content">              
-                <a class="blog-article__link" href="#">
-                  gnim ad minim veniam, quis nostrud    
-                </a>
-                <span class="blog-article__date">28 january, 2020</span>
-              </div>
-            </article>
-          </div>
-
-        </aside>
+        @@include('../components/blog-aside.html')
       </div>
     </div>
 
