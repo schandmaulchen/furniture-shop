@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee | Blog Details</title>
+  <link rel="icon" href="images/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  @@include('../components/header.html')
+
+  <main>
+    @@include('../components/breadcrumbs.html', {title: "Product Details"})
+
+    <section class="product-one">
+      <div class="container">
+        <div class="product-one__inner">
+          <div class="product-one__slider product-slide">
+            <ul class="product-slide__thumb">
+              <li class="product-slide__thumb-item">
+                <img class="product-slide__thumb-img" src="../images/products/product-slider-1.png" alt="table lamp">
+              </li>
+              <li class="product-slide__thumb-item">
+                <img class="product-slide__thumb-img" src="../images/products/product-slider-2.png" alt="lamp body">
+              </li>
+              <li class="product-slide__thumb-item">
+                <img class="product-slide__thumb-img" src="../images/products/product-slider-3.png" alt="lamp shade">
+              </li>
+              <li class="product-slide__thumb-item">
+                <img class="product-slide__thumb-img" src="../images/products/product-slider-4.png" alt="cord switch">
+              </li>
+            </ul>
+
+            <ul class="product-slide__big">
+              <li class="product-slide__big-item">
+                <img class="product-slide__big-img" src="../images/products/product-slider-1.png" alt="table lamp">
+              </li>
+              <li class="product-slide__big-item">
+                <img class="product-slide__big-img" src="../images/products/product-slider-2.png" alt="lamp body">
+              </li>
+              <li class="product-slide__big-item">
+                <img class="product-slide__big-img" src="../images/products/product-slider-3.png" alt="lamp shade">
+              </li>
+              <li class="product-slide__big-item">
+                <img class="product-slide__big-img" src="../images/products/product-slider-4.png" alt="cord switch">
+              </li>
+            </ul>
+          </div>
+
+          <div class="product-one__content">
+            <h2 class="product-one__title">Pendant lamp</h2>
+            <div class="product__rating" data-rateyo-rating="4"></div>
+            <div class="product-one__price">
+              23<span class="product-one__price--currency">$</span>
+            </div>
+            <div class="product-one__text">
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </p>
+            </div>
+
+            <form class="product-one__form" action="#">
+              <div class="product-one__counter">
+                <button class="product-one__minus-btn">-</button>
+                <label><input class="product-one__num" type="number" value="1" min="1"></label>                
+                <button class="product-one__plus-btn">+</button>
+              </div>              
+
+              <button class="product-one__btn" type="submit">Add to Cart</button>
+            </form>
+
+            <ul class="product-one__info">
+              <li class="product-one__info-item">
+                SKU:
+                <span class="product-one__info-value">014</span>
+              </li>
+              <li class="product-one__info-item">
+                Category:
+                <span class="product-one__info-value">Lights</span>
+              </li>
+              <li class="product-one__info-item">
+                Tag:
+                <span class="product-one__info-value">Decorative</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-tabs">
+          <ul class="product-tabs__nav">
+            <li class="product-tabs__nav-item">
+              <a class="product-tabs__btn active" href="#tab-1">Description</a>
+            </li>
+
+            <li class="product-tabs__nav-item">
+              <a class="product-tabs__btn" href="#tab-2">Additional information</a>
+            </li>
+
+            <li class="product-tabs__nav-item">
+              <a class="product-tabs__btn" href="#tab-3">Reviews (2)</a>
+            </li>
+          </ul>
+
+          <ul class="product-tabs__content">
+            <li class="product-tabs__item active" id="tab-1">
+              <div class="product-tabs__desc">
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </li>
+
+            <li class="product-tabs__item" id="tab-2">
+              <div class="product-tabs__desc">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui incidunt recusandae alias tempora officiis, voluptatem magni dicta eveniet. Nemo!
+                </p>
+              </div>
+            </li>
+
+            <li class="product-tabs__item" id="tab-3">
+              <div class="product-tabs__desc">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusantium.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-product">
+      <div class="container">
+        <h2 class="related-product__title title">Related products</h2>
+        
+        <ul class="related-product__slider">
+          <li class="related-product__item">
+            @@include('../components/product.html', {
+              img: "images/products/product-week-1.png",
+              name: "Wooden radio",
+            })
+          </li>          
+
+          <li class="related-product__item">
+          @@include('../components/product.html', {
+            img: "images/products/product-week-2.png",
+            name: "Wooden radio",
+          })
+        </li>
+
+          <li class="related-product__item">
+          @@include('../components/product.html', {
+            img: "images/products/product-week-3.png",
+            name: "Wooden radio",
+          })
+        </li>
+
+          <li class="related-product__item">
+          @@include('../components/product.html', {
+            img: "images/products/product-week-4.png",
+            name: "Wooden radio",
+          })
+        </li>
+
+          <li class="related-product__item">
+          @@include('../components/product.html', {
+            img: "images/products/product-week-5.png",
+            name: "Wooden radio",
+          })
+        </li>
+        </ul>            
+      </div>      
+    </section>
+
+    @@include('../components/blog-list.html')
+    @@include('../components/partners.html')
+  </main>
+  @@include('../components/footer.html')
+  <script src="js/main.min.js"></script>
+</body>
+</html>

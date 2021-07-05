@@ -56,6 +56,17 @@ $(function() {
     }
   });
 
+  // product-tabs
+  $('.product-tabs__btn').on('click', function (e) {
+    e.preventDefault();
+
+    $('.product-tabs__btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.product-tabs__item').removeClass('active');
+    $($(this).attr('href')).addClass('active');
+  });
+
   // sliders
 
   $('.main-slider__inner').slick({
@@ -92,6 +103,76 @@ $(function() {
     ]
   });
 
+  // product slider
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          vertical: false,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          vertical: false,
+          slidesToShow: 1,
+        }
+      },
+    ]
+    
+    // infinite: false
+  });
+
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+  $('.related-product__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><svg height="51" width="51"><use xlink:href="images/sprite.svg#slider-left"></use></svg></button>',
+    nextArrow: '<button class="slick-next"><svg height="51" width="51"><use xlink:href="images/sprite.svg#slider-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+    ]
+  });
+
+// 
   $('.catalog-filter__range').ionRangeSlider({
     type: 'double',
     prefix: '$',
