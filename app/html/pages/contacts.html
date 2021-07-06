@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee | Contacts</title>
+  <link rel="icon" href="images/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  @@include('../components/header.html')
+
+  <main>
+    @@include('../components/breadcrumbs.html', {title: "Contact"})
+
+    <section class="contacts">
+      <div class="container">
+        <span class="contacts__subtitle">Write Here</span>
+        <h2 class="contacts__title title">Get In Touch</h2>
+  
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="31" height="44">
+                <use xlink:href="images/sprite.svg#address"></use>
+              </svg>
+            </div>            
+            <h3 class="contacts__name">Address</h3>
+            <address class="contacts__text">
+              2416 Mapleview Drive Tampa,&nbsp;FL&nbsp;33634
+            </address>
+            
+          </li>
+  
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="37" height="35">
+                <use xlink:href="images/sprite.svg#email"></use>
+              </svg>
+            </div>
+            <h3 class="contacts__name">Our Email</h3>
+            <p class="contacts__text">
+              Main Email : 
+              <a class="contacts__link" href="mailto:contact@website.com">contact@website.com</a>
+            </p>
+            <p class="contacts__text">
+              Inquiries : 
+              <a class="contacts__link" href="mailto:info@mail.com">Info@mail.com</a>
+            </p>
+          </li>
+  
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="37" height="45">
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            
+            <h3 class="contacts__name">Our Phone</h3>
+            <p class="contacts__text">
+              Office Telephone : 
+              <a class="contacts__link" href="tel:0029129102320">0029129102320
+                </a>
+            </p>
+            <p class="contacts__text">
+              Mobile : 
+              <a class="contacts__link" href="tel:000232439493">000 2324 39493</a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="contacts__inner">
+          <form class="feedback-form" action="#">
+            <div class="feedback-form__row">
+              <label class="feedback-form__label feedback-form__label--user">
+                <input class="feedback-form__input" type="text" placeholder="Name" required>
+              </label>
+              <label class="feedback-form__label feedback-form__label--mail">
+                <input class="feedback-form__input" type="email" placeholder="email" required>
+              </label>
+            </div>  
+            <label class="feedback-form__textarea">
+              <textarea class="feedback-form__message" placeholder="Message" required></textarea>
+            </label>
+            <button class="feedback-form__btn" type="submit">Send message</button>
+          </form>
+
+          <div class="map" id="map">
+            <img src="images/map.jpg" alt="map">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include('../components/blog-list.html')
+    @@include('../components/partners.html')
+  </main>
+  @@include('../components/footer.html')
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+  type="text/javascript"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee | About Us</title>
+  <title>Glee | Contacts</title>
   <link rel="icon" href="images/icons/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -68,215 +68,96 @@
   </div>
 </header>
 
-  <main>  
+  <main>
     <div class="breadcrumbs">
+  <div class="container">
+    <h1 class="main-title">Contact</h1>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Home</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <section class="contacts">
       <div class="container">
-        <h1 class="main-title">About Us</h1>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">About Us</a>
-          </li>
-        </ul>
-      </div>      
-    </div>
-
-    <section class="about">
-      <div class="container">
-        <div class="about__inner">
-          <img class="about__image" src="../../images/about/about-bg.jpg" alt="our director">
-          <div class="about__info">
-            <div class="about__subtitle">
-              <span class="about__subtitle--num">12</span>
-              Years Experience Working
-            </div>
-            <h2 class="about__title title">Mission of our creative house</h2>
-            <div class="about__text">
-              <p>
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              </p>
-            </div>
-    
-            <ul class="about__items">
-              <li class="about__item">
-                <span class="about__num about__num--project">520+</span>
-                Projects
-              </li>
-    
-              <li class="about__item">
-                <span class="about__num about__num--revenue">$4m</span>
-                Revenue
-              </li>
-    
-              <li class="about__item">
-                <span class="about__num about__num--award">250</span>
-                Awards
-              </li>
-            </ul>
-          </div>        
-        </div>
-      </div>         
-    </section>
-
-    <div class="stats">
-      <div class="container">
-        <ul class="stats__list">
-          <li class="stats__item stats__item--clients">
-            <span class="stats__num">99%</span>
-            Satisﬁed Clients Rate
-          </li>
-
-          <li class="stats__item stats__item--products">
-            <span class="stats__num">5020+</span>
-            Products Delivered
-          </li>
-
-          <li class="stats__item stats__item--time">
-            <span class="stats__num">23hr</span>
-            Daily Working Time
-          </li>
-
-          <li class="stats__item stats__item--brands">
-            <span class="stats__num">140+</span>
-            Brands in Store
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <section class="team">
-      <div class="container">
-        <div class="team__inner">
-          <div class="team__about">
-            <h2 class="team__title title">Our Team</h2>
-            <div class="team__descr">
-              <p>
-                Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <a class="team__link more-link" href="#">
-              Join With Us
-              <svg height="10" width="23">
-                <use xlink:href="images/sprite.svg#arrow-right"></use>
+        <span class="contacts__subtitle">Write Here</span>
+        <h2 class="contacts__title title">Get In Touch</h2>
+  
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="31" height="44">
+                <use xlink:href="images/sprite.svg#address"></use>
               </svg>
-            </a>
+            </div>            
+            <h3 class="contacts__name">Address</h3>
+            <address class="contacts__text">
+              2416 Mapleview Drive Tampa,&nbsp;FL&nbsp;33634
+            </address>
+            
+          </li>
+  
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="37" height="35">
+                <use xlink:href="images/sprite.svg#email"></use>
+              </svg>
+            </div>
+            <h3 class="contacts__name">Our Email</h3>
+            <p class="contacts__text">
+              Main Email : 
+              <a class="contacts__link" href="mailto:contact@website.com">contact@website.com</a>
+            </p>
+            <p class="contacts__text">
+              Inquiries : 
+              <a class="contacts__link" href="mailto:info@mail.com">Info@mail.com</a>
+            </p>
+          </li>
+  
+          <li class="contacts__item">
+            <div class="contacts__icon">
+              <svg width="37" height="45">
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            
+            <h3 class="contacts__name">Our Phone</h3>
+            <p class="contacts__text">
+              Office Telephone : 
+              <a class="contacts__link" href="tel:0029129102320">0029129102320
+                </a>
+            </p>
+            <p class="contacts__text">
+              Mobile : 
+              <a class="contacts__link" href="tel:000232439493">000 2324 39493</a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="contacts__inner">
+          <form class="feedback-form" action="#">
+            <div class="feedback-form__row">
+              <label class="feedback-form__label feedback-form__label--user">
+                <input class="feedback-form__input" type="text" placeholder="Name" required>
+              </label>
+              <label class="feedback-form__label feedback-form__label--mail">
+                <input class="feedback-form__input" type="email" placeholder="email" required>
+              </label>
+            </div>  
+            <label class="feedback-form__textarea">
+              <textarea class="feedback-form__message" placeholder="Message" required></textarea>
+            </label>
+            <button class="feedback-form__btn" type="submit">Send message</button>
+          </form>
+
+          <div class="map" id="map">
+            <img src="images/map.jpg" alt="map">
           </div>
-
-          <ul class="team__list">
-            <li class="team__item">
-              <img class="team__photo" src="../images/about/team-1.jpg" alt="Eliza Elliot">
-              <div class="team__infobox">
-                <div class="team__details">
-                  <span class="team__name">Eliza Elliot</span>
-                  <span class="team__position">Commodo tempor</span>
-                </div>
-
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#" title="instagram">
-                      <svg height="18" width="18">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#"title="google">
-                      <svg height="15" width="23">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>              
-            </li>
-
-            <li class="team__item">
-              <img class="team__photo" src="../images/about/team-2.jpg" alt="Roscoe A.">
-              <div class="team__infobox">
-                <div class="team__details">
-                  <span class="team__name">Roscoe A.</span>
-                  <span class="team__position">Commodo tempor</span>
-                </div>
-
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#" title="instagram">
-                      <svg height="18" width="18">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#"title="google">
-                      <svg height="15" width="23">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>              
-            </li>
-
-            <li class="team__item">
-              <img class="team__photo" src="../images/about/team-3.jpg" alt="Ruby M.">
-              <div class="team__infobox">
-                <div class="team__details">
-                  <span class="team__name">Ruby M.</span>
-                  <span class="team__position">Commodo tempor</span>
-                </div>
-
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#" title="instagram">
-                      <svg height="18" width="18">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#"title="google">
-                      <svg height="15" width="23">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>              
-            </li>
-
-            <li class="team__item">
-              <img class="team__photo" src="../images/about/team-4.jpg" alt="Marie F. Bloss">
-              <div class="team__infobox">
-                <div class="team__details">
-                  <span class="team__name">Marie F. Bloss</span>
-                  <span class="team__position">Commodo tempor</span>
-                </div>
-
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#" title="instagram">
-                      <svg height="18" width="18">
-                        <use xlink:href="images/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social-item">
-                    <a class="team__social-link" href="#"title="google">
-                      <svg height="15" width="23">
-                        <use xlink:href="images/sprite.svg#google"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>              
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -371,7 +252,6 @@
   </div>
 </div>
   </main>
-
   <footer class="footer">
   <div class="container">
     <ul class="footer__content">
@@ -476,6 +356,9 @@
     </ul>
   </div>
 </footer> 
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+  type="text/javascript"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

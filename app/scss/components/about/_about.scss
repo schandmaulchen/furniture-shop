@@ -17,11 +17,7 @@
   }
 
   &__image {
-    min-height: 676px;
     width: 50%;
-    background-image: url(../images/about/about-bg.jpg);
-    @extend %bg-center;
-    background-size: cover;
 
     @media (max-width: $screen-lg) {
       width: 80%;
@@ -30,10 +26,6 @@
 
     @media (max-width: $screen-md) {
       width: 100%;
-    }
-
-    @media (max-width: $screen-xs) {
-      display: none;
     }
   }
 
