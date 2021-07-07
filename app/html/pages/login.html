@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee | Log In</title>
+  <link rel="icon" href="images/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  @@include('../components/header.html')
+
+  <main>    
+    @@include('../components/breadcrumbs.html', {title: "Log in"})
+
+    <div class="login">    
+      <div class="container">
+        <form class="login-form" action="#">
+
+          <label class="login-form__label">
+            Username or email address *
+            <input class="login-form__input" type="text">
+          </label>
+
+          <label class="login-form__label">            
+            Password *
+            <input class="login-form__input" type="password">
+          </label>
+
+          <button class="login-form__btn" type="submit">Login</button>
+
+          <div class="login-form__row">
+            <label class="login-form__label">
+              <input class="login-form__checkbox" type="checkbox">
+              Remember me
+            </label>
+  
+            <a class="login-form__link"  href="#">Lost your password?</a>
+          </div>
+
+          
+        </form>
+
+        <div class="login__box">
+          <p class="login__text">Not registered? No problem</p>
+          <a class="login__link" href="#">Create an account</a>
+        </div>
+        
+      </div>
+    </div>
+
+    @@include('../components/partners.html')
+  </main>
+  @@include('../components/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+.login {
+  padding: 120px 0;
+
+  &__box {
+    max-width: 470px;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid $grey-80;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    width: 100%;
+    min-height: 60px;
+    padding: 15px 20px;
+    border: 2px solid $blue-100;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    color: $blue-400;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $blue-100;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $accent;
+      border: 2px solid $accent;
+    }
+
+    &:focus {
+      background-color: $blue-50;
+      border: 2px solid $blue-400;
+    }
+  }
+}
+
+.login-form {
+  max-width: 470px;
+  font-size: 14px;
+  margin: 0 auto;
+
+  &__label {
+    display: block;
+    line-height: 2.5;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input,
+  &__btn {
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+  }
+
+  &__input {
+    font-size: 18px;
+    line-height: 1;
+    border: 2px solid $grey-80;
+    margin-bottom: 20px;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border: 2px solid $blue-50;
+    }
+
+    &:focus {
+      border: 2px solid $accent;
+    }
+
+    &:active {
+      border: 2px solid $blue-100;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fffefe;
+    background-color: $blue-100;
+    margin-bottom: 20px;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: $blue-200;
+    }
+
+    &:focus {
+      background-color: $accent;
+    }
+
+    &:active {
+      background-color: $blue-300;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  &__link {
+    transition: color 0.5s;
+
+    &:hover {
+      color: $blue-100;
+    }
+
+    &:focus {
+      color: $accent;
+    }
+
+    &:active {
+      color: $blue-350;
+    }
+  }
+}
